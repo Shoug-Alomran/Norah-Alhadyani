@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Norah Alhadyani | CV</title>
+    <meta
+      name="description"
+      content="Bilingual CV for Norah Alhadyani, a Computer Science student specializing in AI and Data Science."
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f7fb;
+        --card: #ffffff;
+        --text: #1f2937;
+        --muted: #6b7280;
+        --border: #e5e7eb;
+        --accent: #2563eb;
+        --accent-soft: #dbeafe;
+        --shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: linear-gradient(180deg, #eff6ff 0%, var(--bg) 220px);
+        color: var(--text);
+      }
+
+      main {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 48px 20px 64px;
+      }
+
+      .cv {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .hero {
+        padding: 40px 32px 28px;
+        background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .hero h1,
+      .hero p,
+      .section h2,
+      .entry-org,
+      .entry-role,
+      .project-name,
+      .skill-label,
+      .cert-name {
+        margin: 0;
+      }
+
+      .name {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 16px;
+        align-items: baseline;
+      }
+
+      .title-line {
+        margin-top: 10px;
+        font-size: 1.08rem;
+        color: var(--muted);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 14px;
+      }
+
+      .contact-block {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+        color: var(--muted);
+        font-size: 0.97rem;
+      }
+
+      .contact-block a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .contact-block a:hover {
+        text-decoration: underline;
+      }
+
+      .summary {
+        padding: 24px 32px 8px;
+        font-size: 1rem;
+        line-height: 1.8;
+      }
+
+      .summary p {
+        margin: 0;
+      }
+
+      .section {
+        padding: 0 32px 28px;
+      }
+
+      .section h2 {
+        font-size: 0.95rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 16px;
+      }
+
+      .entry,
+      .project,
+      .cert-item {
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: #fff;
+      }
+
+      .entry,
+      .project {
+        padding: 20px;
+      }
+
+      .entry + .entry,
+      .project + .project {
+        margin-top: 14px;
+      }
+
+      .entry {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 18px;
+      }
+
+      .entry-org {
+        font-size: 1.05rem;
+        font-weight: 700;
+      }
+
+      .entry-role {
+        margin-top: 6px;
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      .entry-bullets {
+        margin: 12px 0 0;
+        padding-left: 18px;
+        line-height: 1.7;
+      }
+
+      .entry-meta {
+        text-align: right;
+        color: var(--muted);
+        white-space: nowrap;
+        font-size: 0.95rem;
+      }
+
+      .project-header {
+        margin-bottom: 8px;
+      }
+
+      .project-name {
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      .project-desc {
+        line-height: 1.7;
+        color: var(--muted);
+      }
+
+      .skills-grid,
+      .two-col {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .skills-grid > div,
+      .cert-item {
+        padding: 18px;
+        background: #fff;
+      }
+
+      .skill-label {
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--accent);
+        margin-bottom: 8px;
+      }
+
+      .skill-items,
+      .cert-date {
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .cert-name {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+
+      .lang-ar {
+        direction: rtl;
+        font-family: "Tahoma", "Arial", sans-serif;
+      }
+
+      .lang-en,
+      .lang-ar {
+        display: inline-block;
+      }
+
+      .footer-note {
+        padding: 0 32px 32px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      @media (max-width: 720px) {
+        main {
+          padding: 24px 14px 40px;
+        }
+
+        .hero,
+        .summary,
+        .section,
+        .footer-note {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+        .entry {
+          grid-template-columns: 1fr;
+        }
+
+        .entry-meta {
+          text-align: left;
+          white-space: normal;
+        }
+
+        .skills-grid,
+        .two-col {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article class="cv">
+        <header class="hero">
+          <div class="name">
+            <span class="lang-en">Norah Alhadyani</span>
+            <span class="lang-ar">نورة الهدیاني</span>
+          </div>
+          <p class="title-line">
+            <span class="lang-en">Computer Science Student (AI &amp; Data Science)</span>
+            <span class="lang-ar">طالبة علوم الحاسب (الذكاء الاصطناعي وعلوم البيانات)</span>
+          </p>
+
+          <div class="contact-block">
+            <div>
+              <span class="lang-en">Riyadh, Saudi Arabia</span>
+              <span class="lang-ar">الرياض، المملكة العربية السعودية</span>
+            </div>
+            <div>
+              <a href="https://linkedin.com/in/norah-alhadyani">linkedin.com/in/norah-alhadyani</a>
+            </div>
+          </div>
+        </header>
+
+        <section class="summary">
+          <p>
+            <span class="lang-en">
+              Computer Science student specializing in AI &amp; Data Science, combining technical
+              knowledge with a background in office management. Passionate about artificial
+              intelligence, cybersecurity, and digital transformation. Experienced in
+              administrative coordination and data organization, with strong communication and
+              teamwork skills. Currently developing skills in Python, data analysis, and machine
+              learning to solve real-world problems.
+            </span>
+            <span class="lang-ar">
+              طالبة علوم الحاسب تخصص ذكاء اصطناعي وعلوم البيانات، أمتلك مزيجًا من المهارات
+              التقنية والخبرة الإدارية في إدارة المكاتب. مهتمة بالذكاء الاصطناعي والأمن
+              السيبراني والتحول الرقمي. لدي خبرة في التنسيق الإداري وتنظيم البيانات، مع مهارات
+              قوية في التواصل والعمل الجماعي. أعمل حاليًا على تطوير مهاراتي في بايثون وتحليل
+              البيانات وتعلم الآلة لحل مشكلات واقعية.
+            </span>
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Education</h2>
+
+          <div class="entry">
+            <div class="entry-main">
+              <p class="entry-org">
+                <span class="lang-en">Prince Sultan University</span>
+                <span class="lang-ar">جامعة الأمير سلطان</span>
+              </p>
+              <p class="entry-role">
+                <span class="lang-en">Bachelor of Computer Science (AI &amp; Data Science)</span>
+                <span class="lang-ar">بكالوريوس علوم الحاسب (ذكاء اصطناعي وعلوم البيانات)</span>
+              </p>
+              <ul class="entry-bullets">
+                <li>
+                  <span class="lang-en">Expected Graduation: 2027</span>
+                  <span class="lang-ar">تاريخ التخرج المتوقع: ٢٠٢٧</span>
+                </li>
+              </ul>
+            </div>
+            <div class="entry-meta">
+              <span class="lang-en">Riyadh, KSA<br />Jan 2023 - Dec 2027</span>
+              <span class="lang-ar">الرياض<br />٢٠٢٣ - ٢٠٢٧</span>
+            </div>
+          </div>
+
+          <div class="entry">
+            <div class="entry-main">
+              <p class="entry-org">
+                <span class="lang-en">Princess Nourah Bint Abdulrahman University</span>
+                <span class="lang-ar">جامعة الأميرة نورة بنت عبد الرحمن</span>
+              </p>
+              <p class="entry-role">
+                <span class="lang-en">Diploma in Office Management</span>
+                <span class="lang-ar">دبلوم إدارة المكاتب</span>
+              </p>
+              <ul class="entry-bullets">
+                <li>
+                  <span class="lang-en">
+                    Focused on administration, records management, communication, and coordination
+                  </span>
+                  <span class="lang-ar">التركيز على الإدارة، إدارة السجلات، التواصل، والتنسيق</span>
+                </li>
+              </ul>
+            </div>
+            <div class="entry-meta">
+              <span class="lang-en">Aug 2020 - Jun 2022</span>
+              <span class="lang-ar">٢٠٢٠ - ٢٠٢٢</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Experience</h2>
+
+          <div class="entry">
+            <div class="entry-main">
+              <p class="entry-org">
+                <span class="lang-en">Federation of Saudi Chambers</span>
+                <span class="lang-ar">اتحاد الغرف السعودية</span>
+              </p>
+              <p class="entry-role">
+                <span class="lang-en">Office Management Trainee · Internship</span>
+                <span class="lang-ar">متدربة إدارة مكاتب · تدريب</span>
+              </p>
+              <ul class="entry-bullets">
+                <li>
+                  <span class="lang-en">
+                    Managed daily administrative tasks including data entry, filing, and document
+                    organization
+                  </span>
+                  <span class="lang-ar">إدارة المهام الإدارية اليومية مثل إدخال البيانات وتنظيم الملفات</span>
+                </li>
+                <li>
+                  <span class="lang-en">
+                    Supported office operations and coordination to improve workflow efficiency
+                  </span>
+                  <span class="lang-ar">دعم العمليات المكتبية وتحسين كفاءة سير العمل</span>
+                </li>
+              </ul>
+            </div>
+            <div class="entry-meta">
+              <span class="lang-en">Riyadh, KSA<br />May 2022 - Aug 2022</span>
+              <span class="lang-ar">الرياض<br />٢٠٢٢</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Projects</h2>
+
+          <div class="project">
+            <div class="project-header">
+              <p class="project-name">
+                <span class="lang-en">Regression Models Workshop Application</span>
+                <span class="lang-ar">تطبيق نماذج الانحدار</span>
+              </p>
+            </div>
+            <div class="project-desc">
+              <span class="lang-en">
+                Applied statistical techniques and regression models to analyze financial
+                decision-making scenarios.
+              </span>
+              <span class="lang-ar">تطبيق تقنيات إحصائية ونماذج الانحدار لتحليل قرارات مالية.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Skills</h2>
+
+          <div class="skills-grid">
+            <div>
+              <p class="skill-label">Technical</p>
+              <div class="skill-items">Python, Java, Data Analysis (Basic), AI Fundamentals</div>
+            </div>
+            <div>
+              <p class="skill-label">Tools</p>
+              <div class="skill-items">Microsoft Office, Excel</div>
+            </div>
+            <div>
+              <p class="skill-label">Soft Skills</p>
+              <div class="skill-items">Communication, Teamwork, Organization</div>
+            </div>
+            <div>
+              <p class="skill-label">Languages</p>
+              <div class="skill-items">Arabic (Native), English (Professional)</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Certifications</h2>
+
+          <div class="two-col">
+            <div class="cert-item">
+              <span class="cert-name">Programming for Everybody (Python)</span>
+              <span class="cert-date">University of Michigan · 2025</span>
+            </div>
+            <div class="cert-item">
+              <span class="cert-name">Python for Data Science, AI &amp; Development</span>
+              <span class="cert-date">IBM · 2025</span>
+            </div>
+            <div class="cert-item">
+              <span class="cert-name">Unix System Basics</span>
+              <span class="cert-date">Codio · 2025</span>
+            </div>
+          </div>
+        </section>
+
+        <div class="footer-note">
+          This CV is published as a static site and opens directly on the main homepage.
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
